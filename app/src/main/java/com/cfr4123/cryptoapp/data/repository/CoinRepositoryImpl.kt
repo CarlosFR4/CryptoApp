@@ -1,10 +1,11 @@
 package com.cfr4123.cryptoapp.data.repository
 
+import com.cfr4123.cryptoapp.data.remote.CoinPaprikaApi
 import com.cfr4123.cryptoapp.data.remote.dto.CoinDetailDto
 import com.cfr4123.cryptoapp.data.remote.dto.CoinDto
 import com.cfr4123.cryptoapp.domain.repository.CoinRepository
 
-class CoinRepositoryImpl(private val api: CoinRepository): CoinRepository {
+class CoinRepositoryImpl(private val api: CoinPaprikaApi): CoinRepository {
     override suspend fun getCoins(): List<CoinDto> {
         return api.getCoins()
     }
