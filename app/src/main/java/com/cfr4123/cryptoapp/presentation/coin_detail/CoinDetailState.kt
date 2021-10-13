@@ -1,6 +1,5 @@
-package com.cfr4123.cryptoapp.presentation.detail
+package com.cfr4123.cryptoapp.presentation.coin_detail
 
-import com.cfr4123.cryptoapp.domain.models.Coin
 import com.cfr4123.cryptoapp.domain.models.CoinDetail
 
 data class CoinDetailState(

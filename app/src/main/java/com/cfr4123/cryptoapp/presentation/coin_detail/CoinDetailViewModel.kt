@@ -1,4 +1,4 @@
-package com.cfr4123.cryptoapp.presentation.detail
+package com.cfr4123.cryptoapp.presentation.coin_detail
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -8,13 +8,12 @@ import androidx.lifecycle.viewModelScope
 import com.cfr4123.cryptoapp.common.Constants
 import com.cfr4123.cryptoapp.common.Resource
 import com.cfr4123.cryptoapp.domain.use_cases.get_coin.GetCoinUseCase
-import com.cfr4123.cryptoapp.domain.use_cases.get_coins.GetCoinsUseCase
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 class CoinDetailViewModel(
-    private val getCoinUseCase: GetCoinUseCase,
-    safeStateHandle: SavedStateHandle
+    safeStateHandle: SavedStateHandle,
+    private val getCoinUseCase: GetCoinUseCase
 ) : ViewModel() {
 
     private val _state = mutableStateOf(CoinDetailState())
